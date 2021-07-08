@@ -1,0 +1,58 @@
+<div class="upper" >
+   
+</div>
+<div style="background-color: #111111">
+<div class="l1">
+    <div class="logbox">
+        <h1 style="font-weight: 500; font-size: 30px;">Sign Up</h1>
+       <div >
+        <mat-form-field appearance="outline" class="form1" >
+            <mat-label>First Name</mat-label>
+            <input [formControl]="firstnameControl" matInput placeholder="Jhone" >  <!--Add formControl to collect data-->
+             <mat-error *ngIf="firstnameControl.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>perm_identity</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form1">
+            <mat-label>Last Name</mat-label>
+            <input  [formControl]="lastnameControl" matInput placeholder="Peter">
+            <mat-error *ngIf="lastnameControl.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form1">
+            <mat-label>Email</mat-label>
+            <input  [formControl]="emailControl" matInput placeholder="jhone@example.com">
+            <mat-error *ngIf="emailControl.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline"  class="form1">
+            <mat-label>Password</mat-label>
+            <input  [formControl]="passwordControl" matInput [type]="hide ? 'password' : 'text'">
+            <mat-error *ngIf="passwordControl.invalid">{{getErrorMessage()}}</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline"  class="form1">
+            <mat-label>Comform Password</mat-label>
+            <input  [formControl]="conformpasswordControl" matInput [type]="hide ? 'password' : 'text'">
+            <mat-error *ngIf="conformpasswordControl.invalid">{{getErrorMessage()}}</mat-error>
+            
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <button mat-raised-button class="loginButton" (click)="signup()">Sign Up</button>
+          <div class="text1">Already have any account? <span style="font-weight: 500;" routerLink='login'>Login</span></div>
+       </div>
+       
+       
+    </div>
+    
+</div>
+
+</div>

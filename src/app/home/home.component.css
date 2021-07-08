@@ -1,0 +1,29 @@
+.example-card {
+    width: '100%';
+    text-align: center;
+   
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+
+
+.upper{
+   
+ margin-left: -50px;
+  }
+  
+  .example-button-container {
+    padding: 20px;
+    text-align: end;
+   
+  }
+  .btn{
+    background:#111111;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }

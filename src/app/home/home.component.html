@@ -1,0 +1,22 @@
+<div class="example-button-container">
+    <button mat-fab class="btn" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+<div class="main-div">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div class="example-header-image"></div>
+     
+    </mat-card-header>
+    <div class="upper">
+    <img mat-card-image src="./assets/user2.png" alt="Photo of a Shiba Inu" style="width: 100px; margin-left: 50px;">
+    </div>
+    <mat-card-title>{{this.firstname}} {{this.lastname}}</mat-card-title>
+    <mat-card-subtitle>{{this.email}}</mat-card-subtitle>
+  </mat-card>
+</div>
+<!-- <h1>{{this.id}}</h1>
+<h1>{{this.firstname}}</h1>
+<h1>{{this.lastname}}</h1>
+<h1>{{this.email}}</h1> -->
